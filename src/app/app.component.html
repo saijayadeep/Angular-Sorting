@@ -1,0 +1,25 @@
+<p>Sample Basic Table with data in Component</p>
+
+<table class="table table-striped">
+  <thead>
+  <tr scope="col">
+    <th scope="col">Date</th>
+    <th scope="col" >Description</th>
+    <th scope="col" >Amount</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let transaction of SampleTransactionData">
+    <th scope="row">{{ transaction.date }}</th>
+    <td>{{ transaction.description }}</td>
+    <td>{{ transaction.amount }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<button (click)="Asc()">Date by Ascending Order</button>
+<button (click)="Desc()">Date by Descending Order</button>
+<button (click)="SortDescription()">Description in Ascending</button>
+<button (click)="SortDescriptionZtoATest()">Description in Descending</button>
+<button (click)="SortAmountAtoZ()">Amount in Ascending</button>
+<button (click)="SortAmountZtoA()">Amount in Descending</button>
